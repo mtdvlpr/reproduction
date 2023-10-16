@@ -1,12 +1,9 @@
 <template>
-  <div>
-    <p>Hello world</p>
-    <v-btn>hardcoded <v-icon icon="i-mdi-home" /></v-btn>
-    <v-btn @click="condition = !condition">conditional <v-icon :icon="'i-mdi-tv' + (condition ? '-off' : '')" /></v-btn>
-    <v-btn @click="condition = !condition">variable string<v-icon :icon="`i-mdi-account${condition ? '' : '-circle'}`"/></v-btn>
+  <div class="pa-4" style="width: 800px">
+    <p>VSelect should get its default locale message `$vuetify.open` from the Vuetify locales</p>
+    <v-select :items="[1, 2, 3, 4, 5]" />
   </div>
 </template>
 <script setup lang="ts">
-const condition = ref(false)
 
 </script>
