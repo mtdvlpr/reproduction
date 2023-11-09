@@ -6,6 +6,8 @@
     <button @click="makeEmpty">Go to required page (empty)</button>
     <button @click="makeNull">Go to required page (null)</button>
     <button @click="makeUndefined">Go to required page (undefined)</button>
+    <p>The parameter is cleared but the url is not</p>
+    <p>If you keep clicking the buttons, the url sometimes does change, but sometimes the required param suddenly also becomes empty</p>
   </div>
 </template>
 <script setup lang="ts">
