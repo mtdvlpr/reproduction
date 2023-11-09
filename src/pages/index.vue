@@ -1,10 +1,12 @@
 <template>
   <div class="pa-4">
     <p>Home page</p>
-    <a href="/something/anything">Go to optional page</a>
   </div>
 </template>
 <script setup lang="ts">
-const requiredParam = useRouteParams<string>('required')
-const optionalParam = useRouteParams<string | undefined>('optional', undefined)
+onMounted(() => {
+  // Type of $foo is unknown because the NuxtApp type is coming from vuetify-nuxt-module/dist/module.d.ts
+  const foo = useNuxtApp().$foo
+  console.log(foo)
+})
 </script>

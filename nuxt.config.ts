@@ -8,13 +8,9 @@ export default defineNuxtConfig({
     typeCheck: false,
     tsConfig: { compilerOptions: { moduleResolution: "bundler" } },
   },
-  imports: {
-    presets: [
-      {
-        from: "@vueuse/router",
-        imports: ["useRouteParams", "useRouteQuery"],
-      },
-    ],
+  modules: ["vuetify-nuxt-module"],
+  vuetify: {
+    moduleOptions: { prefixComposables: true },
+    vuetifyOptions: "./config/vuetify.config.ts",
   },
-  modules: ["@vueuse/nuxt"],
 });
