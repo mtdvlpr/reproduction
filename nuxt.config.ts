@@ -8,13 +8,4 @@ export default defineNuxtConfig({
     typeCheck: false,
     tsConfig: { compilerOptions: { moduleResolution: "bundler" } },
   },
-  imports: {
-    presets: [
-      {
-        from: "@vueuse/router",
-        imports: ["useRouteParams", "useRouteQuery"],
-      },
-    ],
-  },
-  modules: ["@vueuse/nuxt"],
 });
